@@ -27,5 +27,52 @@
       <button id="highlight">Highlight</button>
     </div>
   </div>
+
+  <script
+          src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
+  <script>
+
+
+//Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.
+    function addToList() {
+      let userInput = '<li>' + $('#input').val() + '</li>';
+      $('#favorite-food').append(userInput)
+    }
+    $('#add-to-list').click(addToList);
+
+    //When the heading 'Change Me' is double clicked, change its background-color to purple.
+
+    function purpleBG() {
+      $('#change-me').css('background-color' , 'purple')
+    }
+
+     $('#change-me').dblclick(purpleBG);
+
+    //Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort.
+
+    function cohortInput() {
+      let userInput = $('#cohort-name').val();
+      $('#my-cohort').text(userInput)
+    }
+
+    $('#change-cohort').click(cohortInput);
+
+// When 'Highlight' button is clicked, change the background color of the cohort name to yellow.
+
+    function yellowBG() {
+      $('#my-cohort').css('background-color' , 'yellow')
+    }
+
+    $('#highlight').click(yellowBG)
+
+  //  Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
+
+    setTimeout(function () {
+      $('body').css('background-color','pink')
+    }, 3000)
+
+  </script>
 </body>
 </html>
